@@ -1,0 +1,33 @@
+.form-group {
+
+  &--inline {
+    margin-bottom: 32px;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    .formInput {
+      margin-right: 16px;
+      margin-bottom: 0;
+      flex: 1;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-group {
+
+    &--inline {
+      flex-flow: row wrap;
+
+      .formInput {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.Footer {
+  padding-top: 67px;
+  color: white;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .f-col {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    padding: 32px;
+  }
+
+  &__contact-info {
+    margin-bottom: 32px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .Footer {
+    padding-top: 67px;
+    color: white;
+
+    .f-col {
+      flex-basis: 100%;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    &__contact-infos {
+      text-align: center;
+      padding: 32px;
+      margin-bottom: 32px;
+      font-size: 14px;
+
+    }
+
+    &__contact-info {
+      margin-bottom: 8px;
+    }
+  }
+}

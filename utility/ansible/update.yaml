@@ -1,0 +1,61 @@
+---
+- hosts: '{{ target }}'
+  remote_user: "{{ remote_user }}"
+
+  vars_files:
+    - 'vars/common.yaml'
+    - 'vars/update.yaml'
+
+  tasks:
+    - include_role:
+        name: db_recreate
+      when: database_reinit
+
+
+    - include_role:
+        name: git_clone_update
+
+    - include_role:
+        name: project_copy_env_file
+      when: update_env_file
+
+    - include_role:
+        name: pip_install_update
+      when: pip
+
+    - include_role:
+        name: configs_create_update
+      when: not daphne and update_configs
+
+    - include_role:
+        name: configs_create_update_daphne
+      when: daphne and update_configs
+
+    - include_role:
+        name: project_chown_chmod
+
+    - include_role:
+        name: manage_migrate_db
+      when: db_migrate
+
+
+
+    - include_role:
+        name: manage_collectstatic
+      when: collect_static
+
+    - include_role:
+        name: manage_apply_fixtures
+      when: apply_fixtures
+
+
+    - include_role:
+        name: project_chown_chmod
+
+    - include_role:
+        name: project_restart
+      when: not is_mac
+
+    - include_role:
+        name: project_restart_mac
+      when: is_mac

@@ -1,0 +1,35 @@
+@import '../vars';
+
+.app-content-item {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  &.page,
+  &.contacts,
+  &.profiles {
+    padding: 32px 32px 56px 32px;
+  }
+
+  &.program {
+    padding: 32px 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app-content-item {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+
+    &.page,
+    &.contacts,
+    &.profiles {
+      padding: 32px 16px;
+    }
+
+    &.program {
+      padding: 32px 16px;
+    }
+  }
+}
+

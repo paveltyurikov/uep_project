@@ -1,0 +1,41 @@
+$placeholder-color: darken(white, 20);
+$placeholder-letter-spacing: 1px;
+.login-form {
+  max-width: 300px;
+  min-width: 280px;
+  margin: 32px auto;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &-input {
+    color: darken(white, 10);
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $placeholder-color;
+      font-weight: 100;
+      letter-spacing: $placeholder-letter-spacing;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: $placeholder-color;
+      font-weight: 100;
+      letter-spacing: $placeholder-letter-spacing;
+    }
+
+    :-ms-input-placeholder { /* IE 10+ */
+      color: $placeholder-color;
+      font-weight: 100;
+      letter-spacing: $placeholder-letter-spacing;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      color: $placeholder-color;
+      font-weight: 100;
+      letter-spacing: $placeholder-letter-spacing;
+    }
+  }
+
+}

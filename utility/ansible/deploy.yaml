@@ -1,0 +1,43 @@
+---
+- hosts: '{{ target }}'
+  become: yes
+  remote_user: "{{ remote_user }}"
+  vars_files:
+    - 'vars/common.yaml'
+    - 'vars/deploy.yaml'
+
+  tasks:
+    - include_role:
+        name: git_clone_update
+
+    - include_role:
+        name: project_copy_env_file
+
+    - include_role:
+        name: project_create_folders
+
+    - include_role:
+        name: configs_create_update
+      when: not daphne
+
+    - include_role:
+        name: pip_install_update
+      when: pip
+
+    - include_role:
+        name: project_chown_chmod
+
+    - include_role:
+        name: db_create
+      when: init_db
+
+    - include_role:
+        name: manage_migrate_db
+      when: init_db
+
+    - include_role:
+        name: manage_server_init
+      when: init_db
+
+    - include_role:
+        name: project_restart

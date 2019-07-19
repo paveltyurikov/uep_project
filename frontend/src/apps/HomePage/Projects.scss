@@ -1,0 +1,61 @@
+.Projects {
+  &__tabs {
+    margin-bottom: 96px;
+    color: #B7B7B7;
+
+    button {
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 28px;
+
+      &.tabs__tab--active {
+        &:first-child {
+        }
+
+        color: #00C48C;
+
+        &:nth-child(2) {
+          color: #0084F4;
+        }
+      }
+    }
+  }
+
+  &__tab {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+  }
+}
+
+.ProjectsCard {
+  flex-basis: 30%;
+  box-sizing: border-box;
+  padding: 32px 16px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  &__icon {
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .ProjectsCard {
+    flex-basis: 50%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ProjectsCard {
+    flex-basis: 100%;
+    padding: 16px 4px;
+  }
+}

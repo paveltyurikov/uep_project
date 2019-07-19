@@ -1,0 +1,65 @@
+.HomePageJumbo {
+  width: 100%;
+  min-height: 300px;
+  box-sizing: border-box;
+  //background-color: rgba(255, 255, 255, .2);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: white;
+  padding-top: 142px;
+  padding-bottom: 200px;
+
+  &__content {
+    max-width: 760px;
+    position: relative;
+
+    &:before {
+      content: url("/static/images/layout/banner_home.png");
+      position: absolute;
+      right: -80%;
+    }
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 107%;
+    background: linear-gradient(49deg, rgb(47,202,154) 43%, rgb(104,217,189) 56%, #fff);
+    font-weight: 800;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .UepHeader__svg {
+    max-width: 90%;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: .15px;
+    opacity: .8;
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+
+  &__image {
+    img {
+      max-width: 445px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .HomePageJumbo {
+    padding: 64px 32px;
+
+    &__content {
+      &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}

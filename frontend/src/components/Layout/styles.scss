@@ -1,0 +1,108 @@
+* {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, .uep-font {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 106.25%;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 112.5%;
+  letter-spacing: -.01em;
+}
+
+body {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #333;
+  border-top: solid 1px transparent;
+  border-bottom: solid 1px transparent;
+  &:after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(232.65deg, #0EFFBA -2.8%, #2BA4FC 49%, #563FFB 100.38%), #7DDFC3;
+    z-index: -2;
+  }
+}
+
+.DefaultBanner {
+  margin-top: 64px;
+  padding: 64px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#content {
+  box-sizing: border-box;
+  position: relative;
+  border-top: solid 1px transparent;
+  border-bottom: solid 1px transparent;
+  background-color: #fff;
+}
+
+// Utils
+.upper {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.f-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+}
+.f-col{
+  box-sizing: border-box;
+}
+.hp-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+a{
+  color: #00C48C;
+}
+
+form {
+  box-sizing: border-box;
+  max-width: 496px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .f-row {
+    flex-flow: row wrap;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .f-col {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 400px){
+  form{
+    padding: 16px 6px;
+  }
+}

@@ -1,0 +1,9 @@
+---
+- hosts: '{{ target }}'
+  remote_user: "{{ remote_user }}"
+  vars_files:
+    - 'vars/common.yaml'
+
+  tasks:
+    - include_role:
+        name: project_update_frontend_full
