@@ -1,0 +1,18 @@
+.Card {
+  padding: 16px;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 400px) {
+  .Card {
+    padding: 4px;
+  }
+}

@@ -1,0 +1,63 @@
+.Job {
+  border-bottom: solid 1px;
+  padding: 67px 64px;
+  &:last-child{
+    border-bottom: none;
+  }
+  &__title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: .15px;
+
+
+    button {
+      margin-left: auto;
+      background-color: transparent;
+      border: none;
+      color: #0084F4;
+      font-size: 42px;
+      line-height: 40px;
+      font-weight: 200;
+    }
+  }
+
+  &__props {
+    margin-bottom: 32px;
+  }
+
+  &__prop {
+    padding-left: 32px;
+    position: relative;
+    color: rgb(90, 90, 90);
+
+    &:before {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12px;
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #00C48C;
+    }
+  }
+
+  &__sign {
+    margin: 32px 0;
+
+    button {
+      display: block;
+      margin: 32px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Job {
+    padding: 67px 32px;
+  }
+}

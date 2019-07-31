@@ -1,0 +1,15 @@
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    margin: 0;
+    padding: 0 0px;
+  }
+
+}

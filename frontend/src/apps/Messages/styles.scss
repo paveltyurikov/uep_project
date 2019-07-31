@@ -1,0 +1,40 @@
+$close-button-size: 16px;
+.Messages {
+  position: fixed;
+  top: 64px;
+  right: 16px;
+  z-index: 90;
+}
+
+.Message {
+  max-width: 280px;
+  box-sizing: border-box;
+  color: white;
+  background-color: #3366FF;
+  border: solid 1px;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(51, 102, 255, 0.25);
+  padding: 8px;
+  margin-bottom: 4px;
+  &__head {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-bottom: 6px;
+  }
+
+  &__close {
+    display: block;
+    margin: 0 0 0 auto;
+    min-width: $close-button-size;
+    min-height: $close-button-size;
+    max-width: $close-button-size;
+    max-height: $close-button-size;
+    border-radius: 50%;
+    line-height: 100%;
+  }
+  &__text{
+    font-weight: 200;
+  }
+}

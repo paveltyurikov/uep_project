@@ -1,0 +1,17 @@
+.btn{
+  box-sizing: border-box;
+  color: white;
+  background-color: #00C48C;
+  border-color: #00C48C;
+  box-shadow: 0 6px 12px rgba(0, 196, 140, 0.16), 0px 16px 24px rgba(0, 196, 140, 0.16);
+  border-radius: 6px;
+  //
+  font-size: 16px;
+  line-height: 28px;
+  padding: 12px;
+  cursor: pointer;
+}
+a.btn{
+  display: inline-block;
+  text-decoration: none;
+}

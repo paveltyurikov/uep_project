@@ -1,0 +1,9 @@
+.static-content {
+  padding: 64px;
+}
+
+@media all and (max-width: 400px) {
+  .static-content {
+    padding: 32px 16px;
+  }
+}

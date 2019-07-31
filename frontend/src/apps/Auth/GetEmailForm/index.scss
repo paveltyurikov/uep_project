@@ -1,0 +1,17 @@
+.get-email-form {
+  max-width: 480px;
+  min-width: 300px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e4e4e4;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+}

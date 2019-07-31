@@ -1,0 +1,13 @@
+.FooterNav{
+  justify-content: center;
+  align-items: center;
+  &__link{
+    padding: 12px 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: currentColor;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
