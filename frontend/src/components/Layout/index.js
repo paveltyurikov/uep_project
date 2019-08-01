@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react'
+import React, { PureComponent } from 'react'
 import ReactDOM from 'react-dom';
 import Container from 'components/Container'
 import Header from 'components/Header'
@@ -22,22 +22,27 @@ export class BannerPortal extends PureComponent {
         return this.domElement !== null ? ReactDOM.createPortal(
             this.props.children,
             this.domElement
-            )
+        )
             :
             null;
     }
 }
 
 
-export default function AppLayout({children}) {
+export default function AppLayout({ children }) {
 
     return (
         <>
             <Header>
-                <Navigation/>
+                <Navigation navs={[
+                    { id: 1, title: 'О системе', url: '#' },
+                    { id: 2, title: 'Компания', url: '#' },
+                    { id: 3, title: 'Медиа', url: '#' },
+                    { id: 4, title: 'Контакты', url: '#' },
+                ]} />
             </Header>
             <Container id={"banner_holder"}>
-                <BannerPortal/>
+                <BannerPortal />
             </Container>
             <section id="content">
                 <Container>
@@ -45,8 +50,8 @@ export default function AppLayout({children}) {
                 </Container>
             </section>
 
-            <Footer/>
-            <Messages/>
+            <Footer />
+            <Messages />
         </>
     )
 }

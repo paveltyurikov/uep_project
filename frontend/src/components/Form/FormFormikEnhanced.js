@@ -1,8 +1,8 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types'
-import {Form} from 'formik';
+import { Form } from 'formik';
 import FormTitle from './FormTitle'
-import {defaultWithFormikEnhanced} from './services'
+import { defaultWithFormikEnhanced } from './services'
 
 class FormikFormEnhanced extends PureComponent {
     static propTypes = {
@@ -23,7 +23,7 @@ class FormikFormEnhanced extends PureComponent {
 
     componentWillUnmount() {
         // Save input before success submit
-        const {storeValues, values, storageVariableName} = this.props;
+        const { storeValues, values, storageVariableName } = this.props;
         if (storeValues) {
             localStorage.setItem(storageVariableName, JSON.stringify(values))
         }
@@ -39,7 +39,7 @@ class FormikFormEnhanced extends PureComponent {
 
         return (
             <Form className={className}>
-                <FormTitle formTitle={formTitle}/>
+                <FormTitle formTitle={formTitle} />
                 {children}
             </Form>
         )

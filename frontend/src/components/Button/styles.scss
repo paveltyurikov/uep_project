@@ -1,8 +1,8 @@
-.btn{
+.btn {
   box-sizing: border-box;
   color: white;
-  background-color: #00C48C;
-  border-color: #00C48C;
+  background-color: #00c48c;
+  border-color: #00c48c;
   box-shadow: 0 6px 12px rgba(0, 196, 140, 0.16), 0px 16px 24px rgba(0, 196, 140, 0.16);
   border-radius: 6px;
   //
@@ -11,7 +11,18 @@
   padding: 12px;
   cursor: pointer;
 }
-a.btn{
+a.btn {
   display: inline-block;
   text-decoration: none;
+}
+.header__back-call {
+  border-color: #d12e27;
+  background-color: #d12e27;
+  color: #ffffff;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.header__back-call:hover .header__back-active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }

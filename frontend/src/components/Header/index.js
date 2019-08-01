@@ -1,35 +1,34 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import Container from 'components/Container'
 import UepLogo from 'components/UepLogo'
+import HeaderSearch from 'components/HeaderSearch'
+import HeaderButtons from 'components/HeaderButtons'
 import './styles.scss'
 
-const HeaderPhone = () => <a href="tel:8495482144" className="headerPhone">+7 (495) 482-15-44</a>;
+export default class Header extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = { showSearch: false }
+    }
+    onSearchClick = () => {
+        this.setState({
+            showSearch: !this.state.showSearch
+        })
+    }
 
-const offSetTriggerValue = 120
+    render() {
+        return (
+            <>
+                <header>
+                    <UepLogo />
+                    <Container>
+                        {this.props.children}
+                        <HeaderButtons onSearchClick={this.onSearchClick} />
+                    </Container>
+                </header>
+                <HeaderSearch showSearch={this.state.showSearch} onSearchClick={this.onSearchClick} />
+            </>
+        )
+    }
 
-export default function Header({children}) {
-    const [scrolled, setScrolled] = useState(false);
-    const checkScrolled = e => {
-        if (window.pageYOffset > offSetTriggerValue && !scrolled) {
-            setScrolled(true)
-        }
-        if (window.pageYOffset <= offSetTriggerValue && scrolled) {
-            setScrolled(false)
-        }
-    };
-    useEffect(() => {
-        window.addEventListener("scroll", checkScrolled);
-        return () => {
-            window.removeEventListener("scroll", checkScrolled);
-        };
-    }, );
-    return (
-        <header className={scrolled ? 'scrolled' : ''}>
-            <Container>
-                <UepLogo/>
-                {children}
-                <HeaderPhone/>
-            </Container>
-        </header>
-    )
 }

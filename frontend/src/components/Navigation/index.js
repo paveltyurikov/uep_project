@@ -5,7 +5,7 @@ import NavItem from './NavItem'
 import {connectNavigation} from 'apps/Nav/connectors'
 import './styles.scss';
 
-function Nav({navs = []}) {
+function Nav(props) {
     const [mobileVisibility, setMobileVisibility] = useState(false);
     const closeMenu = () => {
         setMobileVisibility(false)
@@ -16,7 +16,7 @@ function Nav({navs = []}) {
             <OutsideClickHandler onOutsideClick={closeMenu}>
                 <nav className={mobileVisibility ? 'mobile-visible' : 'mobile-hidden'}>
                     {
-                        navs.map(nav =>
+                        props.navs.map(nav =>
                             <NavItem onClick={closeMenu} key={nav.id} {...nav}/>
                         )
                     }
@@ -26,4 +26,5 @@ function Nav({navs = []}) {
     )
 }
 
-export default connectNavigation(Nav)
+// export default connectNavigation(Nav)
+export default Nav;

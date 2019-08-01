@@ -1,7 +1,6 @@
 nav {
   display: flex;
   flex-flow: row nowrap;
-  color: white;
   margin: auto;
 
   a {
@@ -9,12 +8,13 @@ nav {
     color: currentColor;
     padding: 12px;
     margin-right: 12px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 16px;
-    font-weight: 500;
+    font-weight: normal;
     text-transform: uppercase;
     position: relative;
     white-space: nowrap;
+    color: #4b4644;
 
     &:last-child {
       margin-right: 0;
