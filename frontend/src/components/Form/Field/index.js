@@ -3,7 +3,6 @@ import {Field} from 'formik'
 import classnames from 'classnames'
 import FormInput from 'components/Form/FormInput'
 import FieldError from './Error'
-import Label from './Label'
 import ImageInput from './ImageInput'
 import TextArea from "./textarea";
 import MaskedField from './MaskedInput'
@@ -42,10 +41,10 @@ class FastFormField extends PureComponent {
                     {[`formInput--${fieldProps.type}`]: fieldProps.type},
                 )}
             >
-                <Label field={fieldProps}/>
                 <FieldInput
                     id={fieldProps.name}
                     className={'formInput__input'}
+                    placeholder={fieldProps.label}
                     {...fieldProps}
                 />
                 <FieldError name={fieldProps.name}/>

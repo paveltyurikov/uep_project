@@ -1,8 +1,7 @@
 import {object, string} from 'yup'
 
 import {
-    DEFAULT_PHONE_INPUT_MASK,
-    DEFAULT_PHONE_INPUT_PLACEHOLDER
+    DEFAULT_PHONE_INPUT_MASK
 } from 'appConfig'
 
 const APPEALS_URL = '/api/appeals/';
@@ -18,13 +17,12 @@ export const contactFormConfig = {
             name: 'phone',
             label: 'Телефон',
             type: 'text',
-            placeholder: DEFAULT_PHONE_INPUT_PLACEHOLDER,
             mask: DEFAULT_PHONE_INPUT_MASK,
             fieldType: 'masked'
         },
         message: {
             name: 'message',
-            placeholder: 'Ваше сообщение',
+            placeholder: 'Ваше сообщение...',
             fieldType:"textarea"
         }
     },

@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from 'components/Container'
-import FooterNav from './Nav'
 import ContactForm from 'apps/ContactForm'
 import ContactInfo from './ContactInfo'
 import './styles.scss'
@@ -8,7 +7,7 @@ import './styles.scss'
 export default function Footer() {
     return (
         <footer className="Footer">
-            <Container>
+            <Container id="contacts">
                 <div className="f-row">
                     <div className="f-col">
                         <ContactForm/>
@@ -17,7 +16,6 @@ export default function Footer() {
                         <ContactInfo/>
                     </div>
                 </div>
-                <FooterNav/>
             </Container>
         </footer>
     )

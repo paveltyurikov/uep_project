@@ -1,17 +1,17 @@
 import React from 'react'
-import {connectMessagesActions} from 'apps/Messages/connectors'
+import { connectMessagesActions } from 'apps/Messages/connectors'
 import {
     FormFormikEnhanced,
     SubmitButton,
     FormGroup,
     FormField,
 } from 'components/Form'
-import {contactFormConfig} from './config'
+import { contactFormConfig } from './config'
 import './styles.scss'
 
-const {fields} = contactFormConfig;
+const { fields } = contactFormConfig;
 
-function ContactForm({pushMessage}) {
+function ContactForm({ pushMessage }) {
 
     const createAppealSuccess = (json, formik) => {
         pushMessage({
@@ -23,7 +23,8 @@ function ContactForm({pushMessage}) {
 
     return (
         <div id="ContactForm" tabIndex={0} className="ContactForm">
-            <h1 className="ContactForm__title">Свяжитесь с нами</h1>
+            <h1 className="ContactForm__title">У вас возникли вопросы?</h1>
+            <p>Вы всегда можете обратиться к нам</p>
             <FormFormikEnhanced
                 className="ContactForm__form"
                 onSuccess={createAppealSuccess}

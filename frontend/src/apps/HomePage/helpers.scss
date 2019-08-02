@@ -1,6 +1,17 @@
+#content {
+  background: #f7faff;
+  & .container {
+    max-width: 65%;
+  }
+}
 .HPBlock {
   padding: 100px 0;
   background-color: white;
+  & h2 {
+    font-size: 40px;
+    color: #3450ff;
+    margin-bottom: 55px;
+  }
 }
 
 @media screen and (max-width: 1024px) {

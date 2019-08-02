@@ -1,14 +1,15 @@
 nav {
   display: flex;
   flex-flow: row nowrap;
+  width: 610px;
+  justify-content: space-between;
   color: white;
   margin: auto;
 
   a {
     text-decoration: none;
     color: currentColor;
-    padding: 12px;
-    margin-right: 12px;
+    margin: 12px;
     font-size: 12px;
     line-height: 16px;
     font-weight: 500;
@@ -26,10 +27,10 @@ nav {
         content: '';
         position: absolute;
         left: 0;
-        bottom: 6px;
+        bottom: -5px;
         width: 100%;
         height: 2px;
-        background-color: #00C48C;
+        background-color: white;
       }
     }
   }
