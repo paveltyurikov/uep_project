@@ -10,6 +10,7 @@ const BackCallButton = () => {
                 fields={{}}
                 formTitle={'Заказ обратного звонка'}
                 onSuccess={() => alert('Success')}
+                validationSchema={{}}
             >
                 <FormInput>
                     <input type="text" name="name" className="ui-field" placeholder="Ваше имя"></input>

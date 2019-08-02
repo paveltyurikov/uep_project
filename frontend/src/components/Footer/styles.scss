@@ -109,7 +109,7 @@
 .footer-subscription-send:hover .arrow {
   color: #2c4896;
 }
-.footer-subscription form{
+.footer-subscription form {
   position: relative;
 }
 
@@ -138,7 +138,8 @@
   margin-bottom: 17px;
   font-weight: 400;
 }
-.footer-support-phone a:not(:hover) {
+.footer-support-phone a {
+  line-height: 1.5;
   color: #4b4644;
 }
 
@@ -277,6 +278,6 @@
   font-weight: 400;
   font-size: 28px;
 }
-#subscription-input{
+#subscription-input {
   padding-bottom: 0;
 }

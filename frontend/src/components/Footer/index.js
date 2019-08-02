@@ -26,16 +26,16 @@ export default function Footer() {
                     <div className="footer-shared">
                         <ul className="social-list list-unstyled">
                             <li><a href="https://vk.com/club162277630" rel="nofollow noopener noreferrer" target="_blank" className="social-list-icon vk-color">
-                                <i class="fa fa-vk vk" aria-hidden="true"></i>
+                                <i className="fa fa-vk vk" aria-hidden="true"></i>
                             </a></li>
                             <li><a href="https://www.facebook.com/%D0%9E%D0%9E%D0%9E-%D0%A1%D0%9A%D0%94%D0%9E--2068635610082163/?modal=admin_todo_tour" rel="nofollow noopener noreferrer" target="_blank" className="social-list-icon fb-color">
-                                <i class="fa fa-facebook fb" aria-hidden="true"></i>
+                                <i className="fa fa-facebook fb" aria-hidden="true"></i>
                             </a></li>
                             <li><a href="https://www.youtube.com/channel/UCRa6Mcjby73j7iIY1aIy6mg/featured" rel="nofollow noopener noreferrer" target="_blank" className="social-list-icon yt-color">
-                                <i class="fa fa-youtube yt" aria-hidden="true"></i>
+                                <i className="fa fa-youtube yt" aria-hidden="true"></i>
                             </a></li>
                             <li><a href="https://www.instagram.com/skdo__/" rel="nofollow noopener noreferrer" target="_blank" className="social-list-icon ig-color">
-                                <i class="fa fa-instagram ig" aria-hidden="true"></i>
+                                <i className="fa fa-instagram ig" aria-hidden="true"></i>
                             </a></li>
                         </ul>
 
@@ -49,9 +49,9 @@ export default function Footer() {
                                 <span className="error_email3"></span>
 
                                 <button type="submit" className="footer-subscription-send">
-                                    <i class="fa fa-arrow-right arrow" aria-hidden="true"></i>
+                                    <i className="fa fa-arrow-right arrow" aria-hidden="true"></i>
                                 </button>
-                                <i class="fa fa-envelope-o mail" aria-hidden="true"></i>
+                                <i className="fa fa-envelope-o mail" aria-hidden="true"></i>
 
                                 <input type="hidden" name="af_action" value="25ea61d7c06e4fbea660706eb244120e"></input>
                             </form>
@@ -68,7 +68,15 @@ export default function Footer() {
                         <BackCallButton />
                     </div>
                 </div>
-                <FooterNav />
+                <div className="footer-bottom">
+                    <FooterNav props={[
+                        { title: 'Политика конфиденциальности', url: '/' },
+                        { title: 'Договор Оферты', url: '/' },
+                        { title: 'Антикоррупционная политика', url: '/' }
+                    ]} />
+                    <div className="footer-copy">© 2017—2019 ООО «СКДО +». Все права защищены.</div>
+                </div>
+
             </Container>
         </footer>
     )
