@@ -1,12 +1,8 @@
 import React, { PureComponent } from 'react'
 import ReactDOM from 'react-dom';
-import Container from 'components/Container'
-import Header from 'components/Header'
-import Navigation from 'components/Navigation'
 import Messages from 'apps/Messages'
 import './styles.scss'
 import Footer from 'components/Footer'
-import Projects from 'apps/HomePage/Projects'
 
 export class BannerPortal extends PureComponent {
     constructor(props) {
@@ -34,18 +30,7 @@ export default function AppLayout({ children }) {
 
     return (
         <>
-            <Header>
-                <Navigation />
-            </Header>
-            <Container id={"banner_holder"}>
-                <BannerPortal />
-            </Container>
-            <section id="content">
-                <Container>
-                    {children}
-                </Container>
-            </section>
-            <Projects />
+            {children}
             <Footer />
             <Messages />
         </>

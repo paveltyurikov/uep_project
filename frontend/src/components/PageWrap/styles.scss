@@ -1,0 +1,22 @@
+.PageWrap {
+  margin-top: 100px;
+
+  & .vacancies-email {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: #212529;
+    text-align: center;
+    padding: 100px 0;
+    & a {
+      text-decoration: none;
+    }
+  }
+
+  & .Job {
+    padding: 125px 0 65px 0;
+    border-bottom: 1px solid #e4e4e4;
+  }
+}

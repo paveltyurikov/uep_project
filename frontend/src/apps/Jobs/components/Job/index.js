@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './styles.scss'
 import Button from "components/Button";
 import JobResponseForm from '../JobResponse'
 
-const JobPropsList = ({title, jobProps = []}) => jobProps.length > 0 ?
+const JobPropsList = ({ title, jobProps = [] }) => jobProps.length > 0 ?
     <div className="Job__props">
         <h4>{title}</h4>
         {
@@ -13,15 +13,13 @@ const JobPropsList = ({title, jobProps = []}) => jobProps.length > 0 ?
     :
     null;
 
-export default function Job({id, title, responsibilities = [], expectations = [], conditions = []}) {
+export default function Job({ id, title, responsibilities = [], expectations = [], conditions = [] }) {
     const [visibility, setVisibility] = useState(false);
     const [formVisibility, setFormVisibility] = useState(false);
     return (
-        <div id={id} className="Job">
-            <div onClick={() => setVisibility(!visibility)} className="Job__title">{title}
-                <button onClick={() => setVisibility(!visibility)}>
-                    {visibility ? '-' : '+'}
-                </button>
+        <div id={id} className={responsibilities.length ? 'Job expandable' : 'Job'}>
+            <div className="Job__title">{title}
+                <button onClick={responsibilities.length ? () => setVisibility(!visibility) : null} className={visibility ? 'Job-expanded' : 'Job-collapsed'} />
             </div>
             {
                 visibility ?
@@ -38,13 +36,25 @@ export default function Job({id, title, responsibilities = [], expectations = []
                             title="Условия"
                             jobProps={conditions}
                         />
-                        <div className="Job__sign">
-                            <p>Отправьте свое резюме, предыдущие проекты или рекомендации вашей мамы по адресу <a
-                                href="mailto:info@ueplatform.ru">info@ueplatform.ru</a> или просто нажмите Откликнуться.
-                            </p>
-                            <Button onClick={() => setFormVisibility(!formVisibility)}>Откликнуться на вакансию</Button>
-                        </div>
-                        {formVisibility ? <JobResponseForm setFormVisibility={setFormVisibility} jobId={id}/> : null}
+                        {
+                            responsibilities.length
+                                ? (
+                                    <div className="Job__sign">
+                                        <p>Отправьте свое резюме, предыдущие проекты или рекомендации вашей мамы по адресу <br />
+                                            <a href="mailto:info@ueplatform.ru">info@ueplatform.ru</a> или просто нажмите Откликнуться.
+                                    </p>
+                                        <Button onClick={() => setFormVisibility(!formVisibility)}>Откликнуться на вакансию</Button>
+                                        <p className="social-block">
+                                            Есть друг, который может быть заинтересован? &nbsp;
+                                            <a href="/"><img alt="" src="static/images/layout/Facebook.png" /></a>
+                                            <a href="/"><img alt="" src="static/images/layout/VK.png" /></a>
+                                            <a href="/"><img alt="" src="static/images/layout/LinkedIN.png" /></a>
+                                        </p>
+                                    </div>
+                                )
+                                : null
+                        }
+                        {formVisibility ? <JobResponseForm setFormVisibility={setFormVisibility} jobId={id} /> : null}
                     </>
                     : null
             }

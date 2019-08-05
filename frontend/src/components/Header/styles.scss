@@ -22,11 +22,18 @@ header {
 
   .headerPhone {
     display: inline-block;
-    color: currentColor;
+    color: white;
     text-decoration: none;
     font-size: 14px;
     line-height: 16px;
     padding: 12px 0;
+  }
+  &.vacancies-page {
+    &:not(.scrolled) {
+      .headerPhone {
+        color: black;
+      }
+    }
   }
 }
 

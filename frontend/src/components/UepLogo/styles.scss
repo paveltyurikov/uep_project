@@ -6,3 +6,6 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+.vacancies-page:not(.scrolled) .UepLogo {
+  background-image: url("/static/images/layout/Union-black.svg");
+}

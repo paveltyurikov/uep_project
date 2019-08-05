@@ -1,10 +1,13 @@
 import React from 'react'
+import Container from 'components/Container'
+import './styles.scss'
 
-export default function PageWrap({style, children}) {
+export default function PageWrap({ children }) {
     return (
-        <div style={
-            {backgroundColor: '#fff', ...style}
-
-        } className="PageWrap">{children}</div>
+        <div className="PageWrap">
+            <Container>
+                {children}
+            </Container>
+        </div>
     )
 }
