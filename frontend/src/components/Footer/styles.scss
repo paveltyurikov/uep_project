@@ -97,3 +97,35 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .Footer {
+    height: auto;
+    padding: 0;
+    &__contact-infos {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .container {
+      width: 100%;
+      padding: 0;
+    }
+    & .formInput.name {
+      margin-bottom: 15px;
+    }
+    .ContactForm__title {
+      font-size: 24px;
+    }
+    .f-row {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1007px) {
+  .Footer {
+    & .f-col + .f-col {
+      padding: 0;
+    }
+  }
+}

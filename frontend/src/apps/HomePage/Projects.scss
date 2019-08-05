@@ -40,3 +40,25 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .Projects__wrap {
+    flex-direction: column;
+  }
+  .BusinessDirection {
+    padding: 10px;
+    &__wrap {
+      padding: 5px;
+    }
+    &__img {
+      text-align: center;
+    }
+  }
+  .Projects__list {
+    margin: 0 10px;
+    h3 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}

@@ -9,3 +9,9 @@
 .vacancies-page:not(.scrolled) .UepLogo {
   background-image: url("/static/images/layout/Union-black.svg");
 }
+
+@media screen and (max-width: 1024px) {
+  .UepLogo {
+    background-image: url("/static/images/layout/Union.svg")!important;
+  }
+}
