@@ -27,20 +27,19 @@
 
   .formInput__input {
     box-sizing: border-box;
-    letter-spacing: .2px;
-    font-family: 'Futura New', Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    font-family: Roboto;
 
     padding: 12px 14px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 20px;
     font-weight: 200;
 
     border-radius: 6px;
     border-style: solid;
     border-width: 1px;
-    border-color: #EBF0F2;
+    border-color: #ebf0f2;
     background-color: white;
-
 
     &:hover {
       border-color: #b3b3b3;
@@ -58,19 +57,18 @@
     &:disabled {
       padding: 11px 12px;
       border-width: 1px;
-      border-color: #EBF0F2;
+      border-color: #ebf0f2;
 
       &:hover {
-        border-color: #EBF0F2;
+        border-color: #ebf0f2;
       }
     }
 
     &::placeholder {
       font-family: inherit;
-      color: #BABFC7;
+      color: #babfc7;
     }
   }
-
 
   &--checkbox {
     display: flex;
@@ -83,25 +81,25 @@
     input {
       order: 1;
       border: solid 1px;
-      border-color: #DADADA;
+      border-color: #dadada;
       margin-right: 8px;
     }
   }
 
   &--error {
     //color: #FA5D50;
-    .formInput__input{
-      border-color: #FA5D50;
+    .formInput__input {
+      border-color: #fa5d50;
       border-width: 2px;
       padding: 11px 13px;
     }
 
     .formInput__feedback {
-      color: #FA5D50;
+      color: #fa5d50;
     }
 
     div[class*="-control"] {
-      border-color: #FA5D50;
+      border-color: #fa5d50;
       border-width: 2px;
       padding-top: 6px;
       padding-bottom: 5px;

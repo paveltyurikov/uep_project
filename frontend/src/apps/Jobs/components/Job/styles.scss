@@ -22,7 +22,7 @@
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 0;
-    a{
+    a {
       margin-left: 10px;
     }
   }
@@ -107,6 +107,12 @@
       padding: 8px 24px;
       border: none;
       background: #16c6a2;
+      &:hover {
+        box-shadow: none;
+      }
+      &:active {
+        background: #00bc95;
+      }
     }
 
     a {

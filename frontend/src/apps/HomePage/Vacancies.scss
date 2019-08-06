@@ -22,14 +22,16 @@
 }
 .Vacancies_info {
   & h3 {
+    color: #212529;
     display: flex;
     align-items: center;
   }
   & span {
     display: inline-block;
-    background: black;
+    background: #212529;
     color: white;
     border-radius: 100%;
+    font-family: Roboto;
     font-size: 18px;
     line-height: 26px;
     margin-left: 20px;
@@ -41,7 +43,7 @@
   }
   & a {
     font-family: Montserrat;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
