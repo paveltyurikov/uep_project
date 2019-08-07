@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Job, Responsibility, Expectation, Condition
+from .models import Job, Responsibility, Expectation, Condition, JobResponse
 
 
 class ResponsibilityInlineAdmin(admin.TabularInline):
@@ -30,3 +30,8 @@ class JobAdmin(admin.ModelAdmin):
         pass
 
     job_action.short_description = "Сделать что-то с job_action"
+
+@admin.register(JobResponse)
+class JobResponseAdmin(admin.ModelAdmin):
+    model = JobResponse
+    list_display = ['id', 'job', 'name', 'phone', 'created']
