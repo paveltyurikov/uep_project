@@ -35,3 +35,5 @@ class JobAdmin(admin.ModelAdmin):
 class JobResponseAdmin(admin.ModelAdmin):
     model = JobResponse
     list_display = ['id', 'job', 'name', 'phone', 'created']
+    list_filter = ['job',]
+    search_fields = ['name', 'phone', 'created']
