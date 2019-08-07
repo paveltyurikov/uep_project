@@ -24,10 +24,9 @@ class ItemProxy extends PureComponent {
                     <Navigation />
                 </Header>
                 <PageWrap>
-                    {this.props.jobs.map(job => <Job key={job.id} {...job} />)}
-                    <div className="vacancies-email">
-                        Не нашли здесь свою будущую работу? Представьтесь нам по адресу <a href="mailto:info@ueplatform.ru">info@ueplatform.ru</a>
-                    </div>
+                    {
+                        this.props.jobs.map(job => <Job key={job.id} {...job} />)
+                    }
                 </PageWrap>
             </>
         )

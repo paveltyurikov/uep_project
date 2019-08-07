@@ -5,7 +5,7 @@ export default function ContactInfo() {
         <div id="ContactInfo" className="Footer__contact-infos">
             <div className="Footer__contact-info">
                 <div className="upper">Юридический адрес</div>
-                <div>Россия, 115114, г. Москва, ул. Летниковская,<br/>д. 10, стр1</div>
+                <div>115114, г. Москва, ул. Летниковская,<br/>д. 10, стр. 1</div>
             </div>
             <div className="Footer__contact-info">
                 <div className="upper">телефон</div>
