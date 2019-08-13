@@ -68,3 +68,33 @@
     }
   }
 }
+
+@media screen and (max-width: 320px) {
+  #HomePage_Vacancies {
+    padding-bottom: 80px;
+    .hp-header {
+      margin-bottom: 10px;
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+  .Vacancies_wrap {
+    padding: 0 16px;
+    div {
+      padding: 0;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    h3 + div {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  .Vacancies_info {
+    span {
+      display: none;
+    }
+  }
+}

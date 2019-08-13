@@ -63,3 +63,42 @@
     padding: 80px 30px;
   }
 }
+@media screen and (max-width: 320px) {
+  #content {
+    padding: 0;
+    .HPBlock {
+      h2 {
+        margin: 45px 0 29px 0;
+        font-size: 26px;
+        line-height: 30px;
+      }
+    }
+    #bds {
+      margin: 0;
+      &.f-row {
+        padding-top: 0;
+      }
+    }
+    .BusinessDirection {
+      margin: 0 15px 24px 15px;
+      padding: 20px;
+      &__img {
+        text-align: left;
+      }
+      &__wrap {
+        padding: 0;
+      }
+      &__title {
+        font-size: 20px;
+        line-height: 26px;
+        margin: 16px 0;
+      }
+      &__text {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        margin: 0;
+      }
+    }
+  }
+}

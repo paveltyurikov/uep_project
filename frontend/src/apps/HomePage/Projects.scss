@@ -65,3 +65,36 @@
     }
   }
 }
+
+@media screen and (max-width: 320px) {
+  #HomePage_Projects {
+    margin-bottom: 30px;
+    h2 {
+      margin: 45px 0 29px 0;
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+  .Projects {
+    &__list {
+      margin: 0 16px;
+      & h3 {
+        font-size: 19.5px;
+        line-height: 26px;
+      }
+      ul li {
+        font-size: 17px;
+        letter-spacing: -1px;
+        &::before {
+          margin-left: -28px;
+        }
+      }
+    }
+    &__wrap img {
+      max-width: 90%;
+    }
+  }
+  .Projects__wrap + .Projects__wrap {
+    flex-direction: column-reverse;
+  }
+}
