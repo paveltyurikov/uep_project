@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Messages from 'apps/Messages'
 import './styles.scss'
 import Footer from 'components/Footer'
+import MobileMenu from 'components/MobileMenu'
 
 export class BannerPortal extends PureComponent {
     constructor(props) {
@@ -29,7 +30,7 @@ export class BannerPortal extends PureComponent {
 export default function AppLayout({ children }) {
 
     return (
-        <>
+        <><MobileMenu />
             {children}
             <Footer />
             <Messages />
