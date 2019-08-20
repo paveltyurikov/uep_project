@@ -1,5 +1,5 @@
 import React from 'react'
-import {connectMessagesActions} from 'apps/Messages/connectors'
+import { connectMessagesActions } from 'apps/Messages/connectors'
 import {
     FormFormikEnhanced,
     SubmitButton,
@@ -7,14 +7,14 @@ import {
     FormField,
 } from 'components/Form'
 
-import {jobResponseFormConfig} from 'apps/Jobs/config'
+import { jobResponseFormConfig } from 'apps/Jobs/config'
 
 import './styles.scss'
 
 
-const {fields, formAction} = jobResponseFormConfig;
+const { fields, formAction } = jobResponseFormConfig;
 
-function JobResponseForm({jobId, pushMessage, setFormVisibility}) {
+function JobResponseForm({ jobId, pushMessage, setFormVisibility }) {
     const formActionUrl = `${formAction}${jobId}/add_response/`;
     const createJobResponseSuccess = (json, formik) => {
         pushMessage({
@@ -26,6 +26,10 @@ function JobResponseForm({jobId, pushMessage, setFormVisibility}) {
     };
     return (
         <div className="JobResponseForm">
+            <div className="JobResponseForm__heading">
+                <h3>Отклик на вакансию</h3>
+                <a onClick={() => setFormVisibility(false)}></a>
+            </div>
             <FormFormikEnhanced
                 {...jobResponseFormConfig}
                 formAction={formActionUrl}
@@ -51,7 +55,7 @@ function JobResponseForm({jobId, pushMessage, setFormVisibility}) {
                     <SubmitButton>Отправить</SubmitButton>
                 </div>
             </FormFormikEnhanced>
-        </div>
+        </div >
     )
 }
 

@@ -17,7 +17,7 @@ export default function Job({ id, title, responsibilities = [], expectations = [
     const [visibility, setVisibility] = useState(false);
     const [formVisibility, setFormVisibility] = useState(false);
     return (
-        <div id={id} className={responsibilities.length ? 'Job expandable' : 'Job'}>
+        <div id={`block-${id}`} className={responsibilities.length ? 'Job expandable' : 'Job'}>
             <div className="Job__title">{title}
                 <button onClick={responsibilities.length ? () => setVisibility(!visibility) : null} className={visibility ? 'Job-expanded' : 'Job-collapsed'} />
             </div>
@@ -43,7 +43,10 @@ export default function Job({ id, title, responsibilities = [], expectations = [
                                         <p>Отправьте свое резюме, предыдущие проекты или рекомендации вашей мамы по адресу <br />
                                             <a href="mailto:info@ueplatform.ru">info@ueplatform.ru</a> или просто нажмите Откликнуться.
                                     </p>
-                                        <Button onClick={() => setFormVisibility(!formVisibility)}>Откликнуться на вакансию</Button>
+                                        <Button onClick={() => {
+                                            setFormVisibility(!formVisibility);
+                                            if (!formVisibility) document.querySelector(`#block-${id} .Job__sign`).scrollIntoView({ behavior: "smooth" });;
+                                        }}>Откликнуться на вакансию</Button>
                                         <p className="social-block">
                                             Есть друг, который может быть заинтересован? &nbsp;
                                             <a href="/"><img alt="" src="static/images/layout/Facebook.png" /></a>
