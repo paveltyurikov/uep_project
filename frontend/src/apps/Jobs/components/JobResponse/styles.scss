@@ -37,6 +37,7 @@
     }
   }
 }
+
 @media screen and (max-width: 320px) {
   .JobResponseForm {
     &__heading {
@@ -55,11 +56,6 @@
     button {
       width: 100%;
       margin: 20px 0;
-    }
-  }
-  .Job__sign {
-    .social-block {
-      display: none;
     }
   }
   .form-group--inline,
