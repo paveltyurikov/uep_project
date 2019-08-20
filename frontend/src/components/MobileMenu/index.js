@@ -3,16 +3,16 @@ import './styles.scss';
 
 export default class MobileMenu extends React.Component {
     state = {
-        visibility: 'hidden'
+        display: 'none'
     }
     onClose = () => {
         this.setState({
-            visibility: 'hidden'
+            display: 'none'
         })
     }
     onOpen = () => {
         this.setState({
-            visibility: 'visible'
+            display: 'block'
         })
     }
     render() {
@@ -35,7 +35,7 @@ export default class MobileMenu extends React.Component {
                 </div >
                 <div
                     className="mm-open-btn"
-                    style={this.state.visibility === 'visible' ? { display: 'none' } : null}
+                    style={this.state.display === 'block' ? { display: 'none' } : null}
                     onClick={this.onOpen}
                 ></div>
             </>

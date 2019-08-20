@@ -45,9 +45,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .Projects__wrap {
-    flex-direction: column;
-  }
   .BusinessDirection {
     padding: 10px;
     &__wrap {
@@ -57,12 +54,23 @@
       text-align: center;
     }
   }
-  .Projects__list {
-    margin: 0 10px;
-    h3 {
-      font-size: 24px;
-      line-height: 32px;
+  .Projects {
+    &__wrap {
+      flex-direction: column;
+      &__wrap img {
+        max-width: 90%;
+      }
     }
+    &__list {
+      margin: 0 10px;
+      h3 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+  .Projects__wrap + .Projects__wrap {
+    flex-direction: column-reverse;
   }
 }
 
